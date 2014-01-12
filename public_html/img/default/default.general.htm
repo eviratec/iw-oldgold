@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>[% page_title %]</title>
+	<meta name="robots" content="[% page_robots %]" />
+	<meta name="keywords" content="[% page_keywords %]" />
+	<meta name="description" content="[% page_description %]" />
+	<meta name="copyright" content="[% copyright %]" />
+	
+	<link type="image/x-icon" rel="shortcut icon" href="[% site_url %]favicon.ico" />
+	<link type="text/css" rel="stylesheet" href="[% site_url %]style/default/style.css" />
+	<script type="text/javascript" src="[% site_url %]js/functions.js"></script>
+	
+	[% header_html %]
+	<meta name="google-site-verification" content="Dh0wCL-Ug97iZGv8vENn32IB-whqgjMwsspm405S28Q" /> <!-- Google Verification -->
+	<meta name="alexaVerifyID" content="WFl3KsPx2hD7rxiW9CKENvotmUA" /> <!-- Alexa Site Verification -->
+</head>
+<body onload="[% IF REDIRECT %][% END %]" >
+	
+	<script type="text/javascript" src="[% site_url %]js/tooltip/wz_tooltip.js"></script>
+	
+	<div id="container" name="container">
+		<div id="topMenu" name="topMenu">
+			<ul>
+				<li [% IF hoAct %] class="active" [% END %]><a href="/index.html">Home</a></li>
+				<li [% IF seAct %] class="active" [% END %]><a href="/services.html">Services</a></li>
+				<li [% IF paAct %] class="active" [% END %]><a href="/packages.html">Website Packages</a></li>
+				<li [% IF coAct %] class="active" [% END %]><a href="/contact-us.html">Contact Us</a></li>
+			</ul>
+			<div id="topMenuRight" name="topMenuRight">
+				<!--<img src="/img/default/topmenu-box-left.gif" /><span></span><img src="/img/default/topmenu-box-right.gif" />-->
+			</div>
+		</div>
+		<div id="topLogo" name="topLogo">
+			<div id="headContent" name="headContent">
+
+			</div>
+			<div id="headThread" name="headThread">[% page_thread %]</div>
+		</div>
+		
+		<div style="clear: both; height: 20px;"><img src="/img/shared/spacer.gif" /></div>
+		
+		<div id="leftMenuCont" name="leftMenuCont">
+			<img src="/img/default/leftmenu-head.gif" /><div id="leftMenu" name="leftMenu">
+				<h3>Navigation</h3>
+				<ul>
+					<li><a href="/index.html">Home</a></li>
+					<li [% IF seAct %]class="noPadding"[% END %]><a href="/services.html">Services</a></li>
+						[% IF seAct %]
+						<ul>
+							<li class="noSubPadding"><a href="/services/design.html">Website Design</a></li>
+							<li class="noSubPadding"><a href="/services/development.html">Development</a></li>
+							<li class="noSubPadding"><a href="/services/hosting.html">Web Hosting</a></li>
+							<li class="noSubPadding"><a href="/services/ecommerce.html">eCommerce</a></li>
+						</ul>
+						[% END %]
+					<li [% IF paAct %]class="noPadding"[% END %]><a href="/packages.html">Website Packages</a></li>
+						[% IF paAct %]
+						<ul>
+							<li class="noSubPadding"><a href="/packages.html">Packages Overview</a></li>
+							<li class="noSubPadding"><a href="/packages/full-service.html">Full Service</a></li>
+							<li class="noSubPadding"><a href="/packages/ecommerce.html">eCommerce</a></li>
+						</ul>
+						[% END %]
+					<li [% IF coAct %]class="noPadding"[% END %]><a href="/contact-us.html">Contact Us</a></li>
+						[% IF coAct %]
+						<ul>
+							<li class="noSubPadding"><a href="/contact-us.html">General Enquiry</a></li>
+							<li class="noSubPadding"><a href="/contact-us/get-a-quote.html">Get a Quote</a></li>
+						</ul>
+						[% END %]
+				</ul>
+			</div>
+			<div style="float: left;"><img src="/img/default/leftmenu-foot.gif" /></div>
+		
+			<a href="/contact-us/get-a-quote.html"><img src="/img/default/get-a-quote.gif" style="float: left; margin-top: 10px;" border="0" /></a>
+			<img src="/img/default/aussie-owned.gif" style="float: left; margin-top: 10px;" border="0" alt="100% Australian owned and operated." />
+		</div>
+		
+		<div id="bodyContent" name="bodyContent">
+			[% page_content %]
+		</div>
+		
+		<div id="topLink" name="topLink"><a href="#topMenu">Return to Top ^</a></div>
+		
+		<div style="clear: both; height: 20px;"><img src="/img/shared/spacer.gif" /></div>
+		
+		<div id="footer" name="footer">
+			<div style="height: 40;">
+				<img src="/img/default/footer-logo.gif" style="float: left; margin-right: 25px;" />
+				<div style="float: left;">100% Australian owned and operated
+					<br />Copyright 2010 Integrated Web Services, ABN 62 842 988 455
+					<br /><strong>www.integratedweb.com.au</strong></div>
+				<div style="float: right;">[ <a href="/contact-us.html">contact us</a> ]</div>
+			</div>
+			<div style="clear: both; height: 1px;"><img src="/img/shared/spacer.gif" /></div>
+		</div>
+	</div>
+	
+	<!-- Google Analytics Tracking Code Begin -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-2664330-3");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+	<!-- Google Analytics Tracking Code End -->
+	
+</body>
+</html>

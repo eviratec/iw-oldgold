@@ -1,0 +1,37 @@
+<p>
+  To make a payment, please enter the payment amount in the specified box and click 'Pay Now' to be redirected to PayPal to complete the payment.<br />
+</p>
+<p>
+  <div style="float: left; width: 45%; margin: 0 15px;">
+    <strong>Company Name:</strong><br />
+    [% companyName %]<br /><br />
+    <strong>Customer ID:</strong><br />
+    [% customerID %]<br /><br />
+    <strong>Current Balance:</strong><br />
+    [% customerBalance %] in [% customerBalanceIn %]<br /><br />
+  </div>
+  <div style="float: left; width: 45%; margin: 0 15px;">
+    <strong>Payment By:</strong><br />
+    [% contactName %]<br /><br />
+    <strong>Payment Date:</strong><br />
+    [% dateNow %]<br /><br />
+    <strong>Accepted Payment Methods</strong><br />
+    <a href="#" onclick="javascript:window.open('https://www.paypal.com/au/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');">PayPal</a>, MasterCard, Visa, Bank Card, eCheque &amp; Bank Transfer
+  </div>
+  <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+</p>
+<div class="productDivInner">
+  <div class="productDivTitle"><h2>Make a new payment</h2></div>
+  <div class="productDivContents">
+    <form method="post" name="paymentForm" action="[% webAddress %]my-account/payments/process">
+      <div style="text-align: center;">
+        <strong>Payment Amount</strong><br />
+        AU$ <input type="input" class="smallInput" name="total" value="[% prePopPayment %]" /><br /><br />
+        <input type="hidden" name="req" value="my-account/payments/process" />
+        <input type="submit" name="submit" class="mediumButton" value="Pay Now" /><br />
+        *You will be redirected to PayPal to complete the payment.
+      </div>
+    </form>
+    <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+  </div>
+</div>

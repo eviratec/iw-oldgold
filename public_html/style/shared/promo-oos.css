@@ -1,0 +1,98 @@
+/*
+
+	'OOS-042010' Promotional Style Sheet
+	Copyright 2010 Integrated Web Services
+
+*/
+
+/*  CONTACT FORM
+------------------------------------------------*/
+
+.promoContactDiv {
+	background-color: #770000;
+	width: 754px;
+	padding: 15px 25px;
+	color: #FFF;
+	margin-left: 3px;
+	float: left;
+}
+html>body .promoContactDiv {
+	width: 704px;
+	margin-left: 0px;
+}
+.promoContactDiv h1 {
+	border-top: 4px solid #FFF;
+	padding-top: 15px;
+	font-size: 22px;
+	color: #FFF;
+	margin: 0 0 15px;
+}
+.smallInput {
+	width: 169px;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.smallInput div {
+	background: url(/img/promotions/oos/special-oos-inputs.gif) no-repeat;
+	width: 169px;
+	height: 23px;
+	margin-bottom: 5px;
+}
+.smallInput .rounded {
+	margin: 0 10px;
+	border: 0;
+	width: 149px;
+	height: 21px;
+	font-family: arial;
+}
+html>body .smallInput .rounded {
+	height: 23px;
+}
+.bigInput {
+	width: 345px;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.bigInput div {
+	background: url(/img/promotions/oos/special-oos-inputb.gif) no-repeat;
+	width: 345px;
+	height: 23px;
+	margin-bottom: 5px;
+}
+.bigInput .bigText {
+	width: 345px;
+	background: url(/img/promotions/oos/special-oos-textarea.gif) no-repeat;
+	height: 100px;
+}
+.bigInput textarea {
+	margin: 10px;
+	width: 325px;
+	height: 80px;
+	border: 0;
+	font-family: arial;
+	font-size: 12px;
+}
+.bigInput .rounded {
+	margin: 0 10px;
+	border: 0;
+	width: 325px;
+	height: 21px;
+	font-family: arial;
+}
+html>body .bigInput .rounded {
+	height: 23px;
+}
+.floatingText {
+	float: right;
+	font-family: arial;
+	color: #FFF;
+	font-size: 14px;
+	margin-right: 20px;
+	padding-left: 10px;
+	border-left: 1px solid #FFF;
+	width: 200px;
+}

@@ -1,0 +1,27 @@
+<p>Below you will find a list of domains you currently have associated with the <strong>[% domainList.0.name %]</strong> website.</p>
+<table cellpadding="0" cellspacing="0" class="selection">
+  <thead>
+    <tr>
+      <th width="50">&nbsp;</th>
+      <th>Domain Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    [% FOREACH domain IN domainList %]
+    <tr onclick="window.location = '[% webAddress %]my-account/websites/[% domain.websiteID %]/domains/[% domain.domainID %]';">
+      <td width="50">&nbsp;</td>
+      <td>
+        <strong>[% domain.domainName %] [% domain.domain %]</strong>
+        <br /><span class="smallText">[% domain.domainName %]</span>
+      </td>
+    </tr>
+    [% END %]
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2"><a href="[% webAddress %]my-account/websites/[% domainList.0.websiteID %]/domains/add">Add Domain Name</a></td>
+    </tr>
+  </tfoot>
+</table>
+<p>If you have any questions please feel free to visit the customer support section.</p>
+<p><a href="[% webAddress %]my-account/websites/[% domainList.0.websiteID %]">&raquo; Return to website dashboard</a></p>

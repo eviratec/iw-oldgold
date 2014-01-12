@@ -1,0 +1,139 @@
+[% IF processError == 1 %]
+<div class="formError">
+  <h3>There was a problem with your submission!</h3>
+  <ul>
+    [% FOREACH message IN processErrorMessage %]
+    <li>[% message %]</li>
+    [% END %]
+  </ul>
+</div>
+[% END %]
+<p>
+  Please complete the form below and your account will be created and your order will be placed for:
+  <br /><br /><strong style="margin-left: 20px;">1x Premium Ecommerce Website</strong>
+</p>
+<p>
+  Ordering is easy and only takes a few minutes, after this step you'll be redirected to paypal to complete payment, then you'll be returned to us to get your confirmation, account details, invoice and receipt instantly!
+</p>
+<p>
+  All payments are processed securely via PayPal, for alternate payment methods including direct deposit, please <a href="[% webAddress %]contact-us">click here to contact us</a>.
+</p>
+<form method="post" name="paymentForm" action="[% webAddress %]order/express/process">
+  <h2>Payment Options</h2>
+  <p>Please click on your prefered payment option to select it.</p>
+  <p>
+    <div id="paymentOption1" onclick="selectOption('payment', '1', '2', 'paymentAmount', '770.00');" [% IF formData.paymentOption == 'paymentOption1' %]class="selectSelected"[% ELSE %] [% IF !formData.paymentOption %]class="selectSelected"[% ELSE %]class="select"[% END %] [% END %]>
+      <div class="bigSelection">
+        <h3><img src="[% webAddress %]img/iw2/red.tick.png" /> &nbsp; Make full payment of &#36;770 <span><strong>pay up-front and save &#36;79.00</strong></h3></span>
+        <p>Make payment in full now to receive a &#36;79.00 discount on the full price of a Premium Ecommerce Website.  Your total payment today will be &#36;770.00 (&#36;700.00 Promo Price + &#36;70 GST)</p>
+      </div>
+      <div class="bigSelectionLower">
+        Total cost AU &#36;770.00 (&#36;700.00 + &#36;70.00 GST) with &#36;770.00 paid now.
+      </div>
+    </div>
+    <div id="paymentOption2" onclick="selectOption('payment', '2', '2', 'paymentAmount', '100.00');" [% IF formData.paymentOption == 'paymentOption2' %]class="selectSelected"[% ELSE %]class="select"[% END %]>
+      <div class="bigSelection">
+        <h3><img src="[% webAddress %]img/iw2/red.tick.png" style="visibility: hidden;" /> &nbsp; Make a deposit of &#36;100 <span><strong>no saving</strong></h3></span>
+        <p>If you'd rather not pay the entire amount up front, we require a &#36;100 deposit for work to begin.  You will have an invoice generated for the full amount (&#36;856.90) but only be required to pay &#36;100.00 today.</p>
+      </div>
+      <div class="bigSelectionLower">
+        Total cost AU &#36;856.90 (&#36;779.00 + &#36;79.90 GST) with &#36;100.00 paid now.
+      </div>
+    </div>
+    <input type="hidden" id="paymentOption" name="paymentOption" [% IF formData.paymentOption %]value="[% formData.paymentOption %]"[% ELSE %]value="paymentOption1"[% END %] />
+    <input type="hidden" id="paymentAmount" name="paymentAmount" [% IF formData.paymentAmount %]value="[% formData.paymentAmount %]"[% ELSE %]value="770.00"[% END %] />
+    <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+  </p>
+  <h2>Company Details</h2>
+  <p>
+    <div style="float: left; width: 45%; margin: 0 15px;">
+      <strong>Company/Trading Name:</strong><br />
+      <input type="text" name="companyName" id="companyName" style="border: 1px solid #900; padding: 1px;" [% IF formData.companyName %]value="[% formData.companyName %]"[% END %] /> <strong>*</strong><br /><br />
+      <strong>ABN/ARBN:</strong><br />
+      <input type="text" name="companyABN" id="companyABN" [% IF formData.companyABN %]value="[% formData.companyABN %]"[% END %] /><br /><br />
+      <strong>ACN:</strong><br />
+      <input type="text" name="companyACN" id="companyACN" [% IF formData.companyACN %]value="[% formData.companyACN %]"[% END %] /><br /><br />
+      <strong>Office Phone Number:</strong><br />
+      <input type="text" name="companyPhoneOffice" id="companyPhoneOffice" [% IF formData.companyPhoneOffice %]value="[% formData.companyPhoneOffice %]"[% END %] /> <span style="color: #555; font-style: italic;">incl area code</span><br /><br />
+    </div>
+    <div style="float: left; width: 45%; margin: 0 15px;">
+      <strong>Address Line 1:</strong><br />
+      <input type="text" name="addressLine1" id="addressLine1" style="border: 1px solid #900; padding: 1px;" [% IF formData.addressLine1 %]value="[% formData.addressLine1 %]"[% END %] /> <strong>*</strong><br /><br />
+      <strong>Address Line 2:</strong><br />
+      <input type="text" name="addressLine2" id="addressLine2" [% IF formData.addressLine2 %]value="[% formData.addressLine2 %]"[% END %] /><br /><br />
+      <strong>Suburb &amp; State:</strong><br />
+      <input type="text" name="addressSuburb" id="addressSuburb" style="border: 1px solid #900; padding: 1px;" [% IF formData.addressSuburb %]value="[% formData.addressSuburb %]"[% END %] />
+      <select name="addressStateID" id="addressStateID">
+        <option value="1" [% IF formData.addressStateID == '1' %]selected="selected"[% END %]>ACT</option>
+        <option value="2" [% IF formData.addressStateID == '2' %]selected="selected"[% END %]>NSW</option>
+        <option value="3" [% IF formData.addressStateID == '3' %]selected="selected"[% END %]>NT</option>
+        <option value="4" [% IF formData.addressStateID == '4' %]selected="selected"[% END %]>QLD</option>
+        <option value="5" [% IF formData.addressStateID == '5' %]selected="selected"[% END %]>SA</option>
+        <option value="6" [% IF formData.addressStateID == '6' %]selected="selected"[% END %]>TAS</option>
+        <option value="7" [% IF formData.addressStateID == '7' %]selected="selected"[% END %]>VIC</option>
+        <option value="8" [% IF formData.addressStateID == '8' %]selected="selected"[% END %]>WA</option>
+      </select> <strong>*</strong><br /><br />
+      <strong>Postcode</strong> <strong>*</strong><br />
+      <input type="text" name="addressPostcode" id="addressPostcode" style="border: 1px solid #900; padding: 1px;" [% IF formData.addressPostcode %]value="[% formData.addressPostcode %]"[% END %] /><br /><br />
+    </div>
+    <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+  </p>
+  <h2>Your Details</h2>
+  <p>
+    <div style="float: left; width: 45%; margin: 0 15px;">
+      <strong>First Name:</strong><br />
+      <input type="text" name="contactFirstName" id="contactFirstName" style="border: 1px solid #900; padding: 1px;" [% IF formData.contactFirstName %]value="[% formData.contactFirstName %]"[% END %] /> <strong>*</strong><br /><br />
+      <strong>Last Name:</strong><br />
+      <input type="text" name="contactLastName" id="contactLastName" style="border: 1px solid #900; padding: 1px;" [% IF formData.contactLastName %]value="[% formData.contactLastName %]"[% END %] /> <strong>*</strong><br /><br />
+      <strong>Email Address:</strong><br />
+      <input type="text" name="contactEmail" id="contactEmail" style="border: 1px solid #900; padding: 1px;" [% IF formData.contactEmail %]value="[% formData.contactEmail %]"[% END %] /> <strong>*</strong><br /><br />
+    </div>
+    <div style="float: left; width: 45%; margin: 0 15px;">
+      <strong>Phone (Primary):</strong><br />
+      <input type="text" name="contactPhoneOffice" id="contactPhoneOffice" style="border: 1px solid #900; padding: 1px;" [% IF formData.contactPhoneOffice %]value="[% formData.contactPhoneOffice %]"[% END %] /> <strong>*</strong> <span style="color: #555; font-style: italic;">incl area code</span><br /><br />
+      <strong>Phone (Mobile):</strong><br />
+      <input type="text" name="contactPhoneMobile" id="contactPhoneMobile" [% IF formData.contactPhoneMobile %]value="[% formData.contactPhoneMobile %]"[% END %] /><br /><br />
+      <strong>Phone (Other):</strong><br />
+      <input type="text" name="contactPhoneOther" id="contactPhoneOther" [% IF formData.contactPhoneOther %]value="[% formData.contactPhoneOther %]"[% END %] /> <span style="color: #555; font-style: italic;">incl area code</span><br /><br />
+    </div>
+    <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+  </p>
+  <h2>Website Details</h2>
+  <p>
+    You can skip any part of this section if you like.  We will contact you to get any additional information we may need to complete your website.
+  </p>
+  <p>
+    <div style="float: left; width: 45%; margin: 0 15px;">
+      <strong>Website Name:</strong><br />
+      <input type="text" name="websiteName" id="websiteName" [% IF formData.websiteName %]value="[% formData.websiteName %]"[% END %] /><br /><br />
+      <strong>Website Domain Name:</strong><br />
+      <input type="text" name="websiteDomainName" id="websiteDomainName" [% IF formData.websiteDomainName %]value="[% formData.websiteDomainName %]"[% END %] /> <span style="color: #555; font-style: italic;">e.g. google.com.au</span><br /><br />
+      <strong>Have you already registered it:</strong><br />
+      <input type="text" name="websiteDomainRegistered" id="websiteDomainRegistered" [% IF formData.websiteDomainRegistered %]value="[% formData.websiteDomainRegistered %]"[% END %] /><br /><br />
+    </div>
+    <div style="float: left; width: 45%; margin: 0 15px;">
+      <strong>Nature of business:</strong><br />
+      <input type="text" name="websiteBusinessNature" id="websiteBusinessNature" [% IF formData.websiteBusinessNature %]value="[% formData.websiteBusinessNature %]"[% END %] /><br /><br />
+      <strong>What does your business sell:</strong><br />
+      <input type="text" name="websiteBusinessSells" id="websiteBusinessSells" [% IF formData.websiteBusinessSells %]value="[% formData.websiteBusinessSells %]"[% END %] /><br /><br />
+      <strong>How many products do you sell:</strong><br />
+      <input type="text" name="websiteBusinessProducts" id="websiteBusinessProducts" [% IF formData.websiteBusinessProducts %]value="[% formData.websiteBusinessProducts %]"[% END %] /> <span style="color: #555; font-style: italic;">approx.</span><br /><br />
+    </div>
+    <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+  </p>
+  <h2>Notes &amp; Payment</h2>
+  <p>
+    <div style="float: left; width: 45%; margin: 0 15px;">
+      You will be redirected to PayPal to make a payment for <strong>AU&#36;</strong><div style="display: inline; font-weight: bold;" id="paymentAmountDisplay">[% IF formData.paymentAmount %][% formData.paymentAmount %][% ELSE %]770.00[% END %]</div>.  You will then be returned to this website to receive your confirmation, invoice and receipt.<br /><br />
+      <input type="hidden" name="req" value="order/express/process" />
+      <input type="hidden" id="requiredFields" name="requiredFields" value="companyName::Company Trading Name,addressLine1::Address Line 1,addressSuburb::Address Suburb,addressStateID::Address State,addressPostcode::Address Postcode,contactFirstName::Your First Name,contactLastName::Your Last Name,contactEmail::Your Email Address,contactPhoneOffice::Your Primary Phone Number" />
+      <input type="hidden" id="validateEmail" name="validateEmail" value="contactEmail::Your Email Address" />
+      <input type="submit" name="submit" class="mediumButton" value="Pay Now, Next &gt;&gt;" onclick="javascript:validateForm('paymentForm'); return false;" />
+    </div>
+    <div style="float: left; width: 45%; margin: 0 15px;">
+      <strong>Notes:</strong><br />
+      <textarea id="notes" name="notes" style="width: 250px; height: 100px;"></textarea><br /><br />
+    </div>
+    <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+  </p>
+</form>

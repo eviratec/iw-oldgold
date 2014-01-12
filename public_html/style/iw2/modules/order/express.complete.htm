@@ -1,0 +1,15 @@
+[% IF paymentSuccessful == 1 %]
+<h2>Thank-you!</h2>
+<p>Your payment has been processed successfully, you can view your invoice and payment details via the customer control panel.</p>
+[% ELSE %]
+<h2>Oh no!</h2>
+<p>Your payment has failed to process, this may have been because it was declined or cancelled. You can still view your invoice and failed payment details via the customer control panel.  You can re-try making the payment from the 'My Payments' section of the customer control panel.</p>
+[% END %]
+<p>Your account has been created automatically, you may log in using the following credentials:</p>
+<p>
+    <strong>Username:</strong> [% username %]
+    <br /><strong>Password:</strong> [% password %]
+    <br /><strong>Login URL:</strong> <a href="[% webAddress %]my-account/login">[% webAddress %]my-account/login</a>
+</p>
+<p>These details have also been sent to your registered contact email address <strong>[% primaryEmail %]</strong>.</p>
+<!-- Add Google Analytics / Adwords tracking code here -->

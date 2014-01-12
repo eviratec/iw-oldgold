@@ -1,0 +1,69 @@
+** ALL functions that display html output must be prefixed with 'show'
+    ALL functions that do not display html output must be prefixed with 'process'
+
+** Function names should include no underscores or hyphens, 
+    the first letter of each word after the first should be capitalised
+
+** Template names should reflect their web accessable path
+    e.g. /MODULE/websites/1105/domains/edit.html should be placed in side TPLNAME/modules/MODULE/websites/domains-edit.htm
+    Template groups should only require a sub-folder under the module if they have 8 or more templates
+
+* Home
+  x Home
+
+* Services
+  x Overview
+  o Social Media
+    [Facebook Applications, Spread your influence with social media]
+  x Ecommerce
+    [Websites, Custom Applications -> Web Applications]
+  x Web & UI Design
+    [Users will experience the difference, Websites, User Interface, Templates and Skins]
+  x Application Development
+    [Web Applications, Content Management Systems, Server Applications, Tools]
+  x Search Optimisation & Marketing
+    [Search Placement, Search Optimisation, Search Marketing]
+
+* Packages
+  o Special Offers
+  o Full Service Packages
+  o Ecommerce Packages
+  o Website Packages FAQ
+
+* Hosting & Domains
+  x Standard Hosting
+  x Reseller Hosting
+  x Virtual Private Servers
+  x Domain Registration
+
+* About Us
+  x Integrated Web  /about-us.html
+  x The Team        /about-us/the-team.html
+  x Previous Work   /about-us/previous-work.html
+
+* Contact Us
+  x General Enquiry /contact-us.html
+  x Get a Quote     /contact-us/get-a-quote.html
+  x Thank-you       /contact-us/thankyou.html
+
+* My Account
+  - My Account      /my-account.html                                /modules/my-account/display.pl  showHome()                      /style/[tplName]/modules/my-account/display.htm
+  - Log in          /my-account/login.html                          /modules/my-account/display.pl  showLogin()                     /style/[tplName]/modules/my-account/login.htm
+  - Log out         /my-account/logout.html                         /modules/my-account/display.pl  processLogout()                 /style/[tplName]/modules/my-account/logout.htm
+  - My Invoices     /my-account/invoices.html                       /modules/my-account/display.pl  showInvoiceList()               /style/[tplName]/modules/my-account/invoice-list.htm
+    - View Invoice  /my-account/invoices/view/1123453               /modules/my-account/display.pl  showInvoice(INVOICE_ID)         /style/[tplName]/modules/my-account/invoice-view.htm
+  - My Details      /my-account/details.html                        /modules/my-account/display.pl  showDetails()                   /style/[tplName]/modules/my-account/details.htm
+    - Edit          /my-account/details/edit.html                   /modules/my-account/display.pl  showEditDetails()               /style/[tplName]/modules/my-account/details-edit.htm
+  
+  - My Websites     /my-account/websites.html                       /modules/my-account/websites.pl showWebsiteList()               /style/[tplName]/modules/my-account/websites/list.htm
+    - Website Info  /my-account/websites/1105.html                  /modules/my-account/websites.pl showWebsite(WEBSITE_ID)         /style/[tplName]/modules/my-account/websites/show.htm
+    - Emails        /my-account/websites/1105/emails.html           /modules/my-account/websites.pl showEmailList(WEBSITE_ID)       /style/[tplName]/modules/my-account/websites/email-list.htm
+      - View        /my-account/websites/1105/emails/view.html      /modules/my-account/websites.pl showEmail(EMAIL_ID)             /style/[tplName]/modules/my-account/websites/email-view.htm
+      - Edit        /my-account/websites/1105/emails/edit.html      /modules/my-account/websites.pl showEditEmail(EMAIL_ID)         /style/[tplName]/modules/my-account/websites/email-edit.htm
+    - Domains       /my-account/websites/1105/domains.html          /modules/my-account/websites.pl showDomainList(WEBSITE_ID)      /style/[tplName]/modules/my-account/websites/domain-list.htm
+      - View        /my-account/websites/1105/domains/view.html     /modules/my-account/websites.pl showDomain(DOMAIN_ID)           /style/[tplName]/modules/my-account/websites/domain-view.htm
+      - Edit        /my-account/websites/1105/domains/edit.html     /modules/my-account/websites.pl showEditDomain(DOMAIN_ID)       /style/[tplName]/modules/my-account/websites/domain-edit.htm
+    - Change Req    /my-account/websites/1105/request.html          /modules/my-account/websites.pl showRequestForm(WEBSITE_ID)     /style/[tplName]/modules/my-account/websites/request.htm
+  
+  - Pending Req's   /my-account/requests.html                       /modules/my-account/display.pl  showRequestList()               /style/[tplName]/modules/my-account/request-list.htm
+  - Cust Support    /my-account/support.html                        /modules/my-account/display.pl  showSupport()                   /style/[tplName]/modules/my-account/support.htm

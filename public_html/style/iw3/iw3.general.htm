@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>[% page_title %]</title>
+    <meta name="robots" content="[% page_robots %]" />
+    <meta name="keywords" content="[% page_keywords %]" />
+    <meta name="description" content="[% page_description %]" />
+    <meta name="copyright" content="[% copyright %]" />
+    
+    <link type="image/x-icon" rel="shortcut icon" href="[% site_url %]favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="[% site_url %]style/iw3/style.css" />
+    <script type="text/javascript" src="[% site_url %]js/external/prototype.js"></script>
+    <script type="text/javascript" src="[% site_url %]js/functions.js"></script>
+    <script type="text/javascript" src="[% site_url %]js/iwDropMenu.js"></script>
+    [% IF section == 'home' %]<script type="text/javascript" src="[% site_url %]js/sswitcher.js"></script>[% END %]
+    
+    [% header_html %]
+    <meta name="google-site-verification" content="Dh0wCL-Ug97iZGv8vENn32IB-whqgjMwsspm405S28Q" /> <!-- Google Verification -->
+    <meta name="alexaVerifyID" content="WFl3KsPx2hD7rxiW9CKENvotmUA" /> <!-- Alexa Site Verification -->
+  </head>
+  <body [% IF section == 'home' %]onload="loadSswitcher()"[% END %] >
+    <div style="background: url(/img/iw3/header.bg.png) repeat-x; height: 149px;">
+      
+      <div style="background: url(/img/iw3/header.png) no-repeat center; height: 149px; width: 1020px; margin: 0 auto;">
+        <div style="margin: 0 auto; width: 950px; text-align: right; color: #FFF;">
+          <img src="[% site_url %]img/iw3/logo.png" style="float: left; margin-top: 55px;" alt="Integrated Web Services - If you want it on the web, we'll take care of it." />
+          <div style="float: right; margin-top: 55px; font-weight: bold;">Sales / Support Tel<br /><span style="font-size: 16pt;">1800 823 365</span></div>
+        </div>
+      </div>
+      
+      <div style="background: url(/img/iw3/header.overlay.png) repeat-x; height: 31px; top: 0; position: absolute; width: 100%;">
+        <div style="height: 31px; margin: 0 auto; width: 950px; text-align: right; color: #FFF;">
+          [% IF session.loggedIn %]
+          Logged in as [% session.fullName %], <a href="[% site_url %]my-account/logout">Log out</a>
+          [% ELSE %]
+          <a href="[% site_url %]my-account/login"><img src="[% site_url %]img/iw3/top.button.login.png" border="0" alt="Log in now" style="margin-top: 4px; float: right;" /></a><span style="margin: 7px 5px 0 0; float: right; font-size: 9pt; color: #fddbdb;">You are not currently logged in, </span>
+          [% END %]
+        </div>
+      </div>
+      
+    </div>
+    <div style="background: url(/img/iw3/top.menu.bg.png) repeat-x; height: 36px;">
+        <div style="margin: 0 auto; width: 950px; text-align: right; color: #FFF;">
+          <ul id="topMenu">
+            <li id="homeButton" onclick="window.location = '[% site_url %]'" onmouseover="menuClose()">Home</li>
+            <li id="servicesButton" onclick="window.location = '[% site_url %]services'" onmouseover="menuShow('services')" onmouseout="menuCloseTime()">Services</li>
+            <li id="hostingButton" onclick="window.location = '[% site_url %]hosting'" onmouseover="menuShow('hosting')" onmouseout="menuCloseTime()">Hosting &amp; Domains</li>
+            <li id="aboutButton" onclick="window.location = '[% site_url %]about-us'" onmouseover="menuShow('about')" onmouseout="menuCloseTime()">About Us</li>
+            <li id="contactButton" onclick="window.location = '[% site_url %]contact-us'" onmouseover="menuShow('contact')" onmouseout="menuCloseTime()">Contact Us</li>
+            <li id="accountButton" onclick="window.location = '[% site_url %]my-account'" onmouseover="menuShow('account')" onmouseout="menuCloseTime()">My Account</li>
+          </ul>
+        </div>
+    </div>
+    <div style="background: url(/img/iw3/top.menu.shadow.png) repeat-x; height: 15px;">
+      
+    </div>
+    <div id="innerBackground">
+      <div id="container">
+        <div id="innerContainer">
+          <div id="page">
+            <div id="bodyContent" name="bodyContent">
+              <div class="printButton">
+                <a href="javascript: void(0);" onclick="javascript: printPage(document.location.href);" style="float: right;">Print View</a>
+              </div>
+              <div class="likeButton">
+                <a href="javascript: void(0);" onclick="javascript: likePage(document.location.href, '[% page_title %]');" style="float: right;"><img src="[% site_url %]img/iw2/icons/facebook.gif" border="0" /></a>
+              </div>
+              <h1>[% page_title_h1 %]</h1>
+              <div class="spacer" style="margin: 0; height: 1px;"><img src="[% site_url %]img/shared/spacer.gif" /></div>
+              [% page_content %]
+            </div>
+            [% IF section == 'home' %]
+            <ul class="leftMenu">
+              <li class="first">Quick Navigation</li>
+              <li onclick="window.location = '[% site_url %]services'"><a href="[% site_url %]services">Services</a></li>
+              <li onclick="window.location = '[% site_url %]hosting'"><a href="[% site_url %]hosting">Hosting &amp; Domains</a></li>
+              <li onclick="window.location = '[% site_url %]about-us'"><a href="[% site_url %]about-us">About Us</a></li>
+              <li onclick="window.location = '[% site_url %]contact-us'"><a href="[% site_url %]contact-us">Contact Us</a></li>
+              <li onclick="window.location = '[% site_url %]my-account'"><a href="[% site_url %]my-account">My Account</a></li>
+            </ul>
+            [% END %]
+            [% IF section == 'services' %]
+            <ul class="leftMenu">
+              <li class="first">Services</li>
+              <li onclick="window.location = '[% site_url %]services'"><a href="[% site_url %]services">Overview</a></li>
+              <li onclick="window.location = '[% site_url %]services/application-development'"><a href="[% site_url %]services/application-development">Application Development</a></li>
+              <li onclick="window.location = '[% site_url %]services/ecommerce'"><a href="[% site_url %]services/ecommerce">Ecommerce</a></li>
+              <li onclick="window.location = '[% site_url %]services/web-design'"><a href="[% site_url %]services/web-design">Web Design</a></li>
+              <li onclick="window.location = '[% site_url %]services/social-media'"><a href="[% site_url %]services/social-media">Social Media</a></li>
+              <li onclick="window.location = '[% site_url %]services/online-marketing'"><a href="[% site_url %]services/online-marketing">Online Marketing</a></li>
+            </ul>
+            [% END %]
+            [% IF section == 'hosting' %]
+            <ul class="leftMenu">
+              <li class="first">Hosting &amp; Domains</li>
+              <li onclick="window.location = '[% site_url %]hosting'"><a href="[% site_url %]hosting">Standard Hosting</a></li>
+              <li onclick="window.location = '[% site_url %]hosting/reseller'"><a href="[% site_url %]hosting/reseller">Reseller Hosting</a></li>
+              <li onclick="window.location = '[% site_url %]hosting/domain-registration'"><a href="[% site_url %]hosting/domain-registration">Domain Registration</a></li>
+            </ul>
+            [% END %]
+            [% IF section == 'about-us' %]
+            <ul class="leftMenu">
+              <li class="first">About Us</li>
+              <li onclick="window.location = '[% site_url %]about-us'"><a href="[% site_url %]about-us">Integrated Web</a></li>
+              <li onclick="window.location = '[% site_url %]about-us/previous-work'"><a href="[% site_url %]about-us/previous-work">Previous Work</a></li>
+            </ul>
+            [% END %]
+            [% IF section == 'contact-us' %]
+            <ul class="leftMenu">
+              <li class="first">Contact Us</li>
+              <li onclick="window.location = '[% site_url %]contact-us'"><a href="[% site_url %]contact-us">General Enquiry [% page.title %]</a></li>
+              <li onclick="window.location = '[% site_url %]contact-us/get-a-quote'"><a href="[% site_url %]contact-us/get-a-quote">Get a Quote</a></li>
+            </ul>
+            [% END %]
+            [% IF section == 'websites' %]
+            <ul class="leftMenu">
+              <li class="first">Website Menu</li>
+              <li onclick="window.location = '[% site_url %]my-account/websites/[% sectionParams.websiteID %]'"><a href="[% site_url %]my-account/websites/[% sectionParams.websiteID %]">Website Dashboard</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/websites/[% sectionParams.websiteID %]/emails'"><a href="[% site_url %]my-account/websites/[% sectionParams.websiteID %]/emails">Email Accounts</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/websites/[% sectionParams.websiteID %]/email-groups'"><a href="[% site_url %]my-account/websites/[% sectionParams.websiteID %]/email-groups">Email Groups</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/websites/[% sectionParams.websiteID %]/domains'"><a href="[% site_url %]my-account/websites/[% sectionParams.websiteID %]/domains">Domain Names</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/websites/[% sectionParams.websiteID %]/requests'"><a href="[% site_url %]my-account/websites/[% sectionParams.websiteID %]/requests">Request Queue</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/websites/[% sectionParams.websiteID %]/support'"><a href="[% site_url %]my-account/websites/[% sectionParams.websiteID %]/support">Support</a></li>
+            </ul>
+            [% END %]
+            [% IF session.loggedIn %]
+            <ul class="leftMenu">
+              <li class="first">My Account Menu</li>
+              <li onclick="window.location = '[% site_url %]my-account'"><a href="[% site_url %]my-account">Account Dashboard</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/invoices'"><a href="[% site_url %]my-account/invoices">My Invoices</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/payments'"><a href="[% site_url %]my-account/payments">My Payments</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/details'"><a href="[% site_url %]my-account/details">Customer Details</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/support'"><a href="[% site_url %]my-account/support">Customer Support</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/logout'"><a href="[% site_url %]my-account/logout">Log out</a></li>
+            </ul>
+            [% ELSE %]
+            <form action="[% site_url %]my-account/login" method="post">
+              <ul class="leftMenu">
+                <li class="first">My Account Login</li>
+                <li class="menuBody">
+                  <p>Username</p>
+                  <p style="margin-bottom: 10px;"><input type="text" name="username" id="username" value="" /></p>
+                  <p>Password</p>
+                  <p><input type="password" name="password" id="password" value="" /></p>
+                  <p style="text-align: center; margin-top: 15px;"><input type="hidden" id="req" name="req" value="my-account/login" />
+                  <input type="submit" style="background: url(/img/iw3/lhs.button.png) no-repeat; border: 0; width: 72px; height: 23px; font-size: 9pt; color: #EEE;" name="submit" id="submit" value="Log in now" />
+                  <br /><a href="[% site_url %]my-account/lost-password" class="buttonLink">Forgot Password</a></p>
+                </li>
+              </ul>
+            </form>
+            [% END %]
+            <img id="aussieOwned" src="[% site_url %]img/iw2/aussie.owned.png" alt="100% Australian, all of our staff and servers are located within Australia." style="border: 0; float: left; clear: left;" />
+            <!-- PayPal Logo -->
+                <a href="#" style="clear: left; float: left; margin-left: 7px;" onclick="javascript:window.open('https://www.paypal.com/au/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img  src="https://www.paypalobjects.com/WEBSCR-640-20100823-1/en_AU/i/bnr/horizontal_solution_PP.gif" border="0" alt="Solution Graphics"></a>
+            <!-- PayPal Logo -->
+          </div>
+          
+          <div style="display: none;" class="subMenu" id="servicesMenu" onmouseover="menuCancelCloseTime()" onmouseout="menuCloseTime()">
+            <ul>
+              <li onclick="window.location = '[% site_url %]services'"><a href="[% site_url %]services">Overview</a></li>
+              <li onclick="window.location = '[% site_url %]services/application-development'"><a href="[% site_url %]services/application-development">Application Development</a></li>
+              <li onclick="window.location = '[% site_url %]services/ecommerce'"><a href="[% site_url %]services/ecommerce">Ecommerce</a></li>
+              <li onclick="window.location = '[% site_url %]services/web-design'"><a href="[% site_url %]services/web-design">Web Design</a></li>
+              <li onclick="window.location = '[% site_url %]services/social-media'"><a href="[% site_url %]services/social-media">Social Media</a></li>
+              <li onclick="window.location = '[% site_url %]services/online-marketing'"><a href="[% site_url %]services/online-marketing">Online Marketing</a></li>
+            </ul>
+          </div>
+          <div style="display: none;" class="subMenu" id="hostingMenu" onmouseover="menuCancelCloseTime()" onmouseout="menuCloseTime()">
+            <ul>
+              <li onclick="window.location = '[% site_url %]hosting'"><a href="[% site_url %]hosting">Standard Hosting</a></li>
+              <li onclick="window.location = '[% site_url %]hosting/reseller'"><a href="[% site_url %]hosting/reseller">Reseller Hosting</a></li>
+              <li onclick="window.location = '[% site_url %]hosting/domain-registration'"><a href="[% site_url %]hosting/domain-registration">Domain Registration</a></li>
+            </ul>
+          </div>
+          <div style="display: none;" class="subMenu" id="aboutMenu" onmouseover="menuCancelCloseTime()" onmouseout="menuCloseTime()">
+            <ul>
+              <li onclick="window.location = '[% site_url %]about-us'"><a href="[% site_url %]about-us">Integrated Web</a></li>
+              <li onclick="window.location = '[% site_url %]about-us/previous-work'"><a href="[% site_url %]about-us/previous-work">Previous Work</a></li>
+            </ul>
+          </div>
+          <div style="display: none;" class="subMenu" id="contactMenu" onmouseover="menuCancelCloseTime()" onmouseout="menuCloseTime()">
+            <ul>
+              <li onclick="window.location = '[% site_url %]contact-us'"><a href="[% site_url %]contact-us">Contact Us</a></li>
+              <li onclick="window.location = '[% site_url %]contact-us/get-a-quote'"><a href="[% site_url %]contact-us/get-a-quote">Get a Quote</a></li>
+            </ul>
+          </div>      
+          <div style="display: none;" class="subMenu" id="accountMenu" onmouseover="menuCancelCloseTime()" onmouseout="menuCloseTime()">
+            
+            [% IF session.loggedIn %]
+            <ul>
+              <li onclick="window.location = '[% site_url %]my-account'"><a href="[% site_url %]my-account">Account Dashboard</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/invoices'"><a href="[% site_url %]my-account/invoices">My Invoices</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/payments'"><a href="[% site_url %]my-account/payments">My Payments</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/details'"><a href="[% site_url %]my-account/details">Customer Details</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/support'"><a href="[% site_url %]my-account/support">Customer Support</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/logout'"><a href="[% site_url %]my-account/logout">Log out</a></li>
+            </ul>
+            [% ELSE %]
+            <ul>
+              <li onclick="window.location = '[% site_url %]my-account/login'"><a href="[% site_url %]my-account/login">Account Login</a></li>
+              <li onclick="window.location = '[% site_url %]my-account/lost-password'"><a href="[% site_url %]my-account/lost-password">Forgot Password</a></li>
+            </ul>
+            [% END %]
+            
+          </div>
+          
+          <div class="spacer"><img src="[% site_url %]img/shared/spacer.gif" style="height: 7px;" /></div>
+    
+          <div id="copyright">
+            Copyright &copy; 2010 Integrated Web Services, ABN 62 842 988 455
+          </div>
+        </div>
+        
+        <div id="footer">
+          <a href="#header" style="float: left;">Return to top</a>
+          <a href="[% site_url %]">Home</a> &nbsp; <a href="[% site_url %]services">Services</a> &nbsp; <a href="[% site_url %]hosting">Hosting &amp; Domains</a> &nbsp; <a href="[% site_url %]about-us">About Us</a> &nbsp; <a href="[% site_url %]contact-us">Contact Us</a> &nbsp; <a href="[% site_url %]my-account">My Account</a>
+          <a href="javascript: void(0);" onclick="javascript: printPage(document.location.href);" style="float: right;">Print Page</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Google Analytics Tracking Code Begin -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-2664330-3");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    <!-- Google Analytics Tracking Code End -->
+    
+  </body>
+</html>
+[% IF debugInfo %]<!-- [% debugInfo %] -->[% END %]

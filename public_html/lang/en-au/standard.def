@@ -1,0 +1,104 @@
+######################################
+##	STANDARD LANGUAGE DEFINITIONS FILE
+######################################
+
+##	GENERAL PAGE AND TERM DEFINITIONS
+##	-----------------------------------------
+
+
+
+
+##	PACKAGE COMPONENTS / SERVICES DEFINITIONS
+##	-----------------------------------------
+
+$LANG{'SEF_TITLE'} 			= 'Search Engine Friendly';
+$LANG{'SEF_TITLE_LONG'} 		= 'Search Engine Friendly (SEF)';
+$LANG{'SEF_EXP'} 			= 'Your website will be built with search engine robots in mind,<br />making it easier to be found and indexed by places like Google.';
+
+$LANG{'SEO_TITLE'} 			= 'Search Engine Optimised';
+$LANG{'SEO_TITLE_LONG'} 		= 'Search Engine Optimised (SEO)';
+$LANG{'SEO_EXP'} 			= 'Our SEO services compliment our SEF services by providing additional<br />information throughout your website, just for robots.  This information helps<br />in obtaining a higher ranking on search engines such as Google.<br />Includes search engine and directory submission.';
+
+$LANG{'CUST_DESIGN_TITLE'}		= 'Professional Design';
+
+$LANG{'EMAI_SUPP_TITLE'} 		= '24/7 Email Support';
+$LANG{'EMAI_SUPP_TITLE_LONG'} 	        = '24/7 Email Support';
+$LANG{'EMAI_SUPP_EXP'} 			= '';
+
+$LANG{'GA_TITLE'} 			= 'Google Analytics';
+$LANG{'GA_TITLE_LONG'} 			= 'Google Analytics';
+$LANG{'GA_EXP'} 			= 'We can even set up Google Analytics for your website, providing<br />you with free detailed statistical reports on who visits your website.';
+
+$LANG{'WP_TITLE'} 			= 'Website Pages';
+$LANG{'WP_TITLE_LONG'} 			= 'Website Pages';
+$LANG{'WP_EXP'} 			= 'These are standard web pages, with no special aim or functionality.<br />These types of pages will usually contain mostly text, tables and images.';
+
+$LANG{'LP_TITLE'} 			= 'Landing Pages';
+$LANG{'LP_TITLE_LONG'} 			= 'Landing Pages';
+$LANG{'LP_EXP'} 			= 'Typically for targeted ad campaigns or promotions, these pages generally provide<br />specific information about a campaign, and feature a call to action form or button.';
+
+$LANG{'CF_TITLE'} 			= 'Contact Forms';
+$LANG{'CF_TITLE_LONG'} 			= 'Contact Forms';
+$LANG{'CF_EXP'} 			= 'These provide a way for customers to submit forms and send<br/>enquiries directly from your website to any email you specify.';
+
+$LANG{'AUDOM_TITLE'} 			= '.au Domain Name';
+
+$LANG{'HOSP_TITLE'} 			= 'Hosting Package';
+$LANG{'HOSP_TITLE_LONG'} 		= 'Hosting Package';
+$LANG{'HOSP_EXP'} 			= 'Hosting is required to keep your website and<br />email addresses online and accessible to the world.';
+
+$LANG{'HOSI_TITLE'}			= 'Hosting Included';
+
+$LANG{'HOS_DISK_TITLE'} 		= 'Disk Space';
+
+$LANG{'HOS_TRAF_TITLE'} 		= 'Traffic Allowance';
+
+$LANG{'HOS_EMAI_TITLE'} 		= 'Email Accounts';
+
+$LANG{'HOS_DOMA_TITLE'} 		= 'Domains';
+
+$LANG{'HOS_PHP_TITLE'} 			= 'PHP 5.x';
+
+$LANG{'HOS_MDPL_TITLE'}			= 'Mod_Perl';
+
+$LANG{'HOS_MYSQL_TITLE'}		= 'MySQL Databases';
+
+$LANG{'HOS_CONT_TITLE'} 		= 'Control Panel';
+$LANG{'HOS_CONT_TITLE_LONG'} 	        = 'Control Panel';
+$LANG{'HOS_CONT_EXP'} 			= 'The hosting control panel provided can allow you to add<br />and remove things such as email addresses and domains.';
+
+$LANG{'CUST_TMPL_TITLE'}		= 'Custom Template Design';
+$LANG{'CUST_TMPL_TITLE_LONG'}	        = 'Custom Template Design';
+$LANG{'CUST_TMPL_EXP'}			= 'We design a custom look and feel for the shopping<br />cart software to suit your business, and to make your<br />online store stand out from the rest.';
+
+$LANG{'PAYGA_TITLE'}			= 'Payment Gateway';
+$LANG{'PAYGA_TITLE_LONG'}		= 'Payment Gateway';
+$LANG{'PAYGA_EXP'}			= 'By having a payment gateway you will be able to accept and<br />process credit card payments instantly from your online store.';
+
+$LANG{'DEDSSL_TITLE'}			= 'Dedicated SSL Certificate';
+$LANG{'DEDSSL_TITLE_LONG'}		= 'Dedicated SSL Certificate';
+$LANG{'DEDSSL_EXP'}			= 'Similar to banks and financial institutions, online store transactions must<br />be performed over a secure connection.  A dedicated SSL certificate<br />is required to provide that secure connection.';
+
+$LANG{'HOS_DEDSSL_TITLE'}		= 'Dedicated SSL Available';
+
+$LANG{'CART_TITLE'}			= 'Shopping Cart Software';
+$LANG{'CART_TITLE_LONG'}		= 'Shopping Cart Software';
+$LANG{'CART_EXP'}			= 'The shopping cart software is what runs your online store, it does everything<br />from listing your products, to processing payments and shipping. We provide<br />our customers with premium shopping cart software called CS-Cart.';
+
+$LANG{'SETUP_COST_TITLE'} 		= 'Setup incl. 1st Year';
+$LANG{'SETUP_COST_TITLE_LONG'}	        = 'Setup incl. 1st Year';
+$LANG{'SETUP_COST_EXP'}		= 'This covers the cost of building your website,<br />and the first year of maintainence.';
+
+$LANG{'HOST_COST_TITLE'} 		= 'Hosting (Monthly)';
+
+$LANG{'MAIN_Y_COST_TITLE'} 		= 'Yearly Maintenance';
+$LANG{'MAIN_Y_COST_TITLE_LONG'}	        = 'Maintenance Fee (Yearly)';
+$LANG{'MAIN_Y_COST_EXP'}		= 'This covers on-going expenses such as web hosting,<br />domain names, payment gateways, labour and support etc.';
+
+$LANG{'TRAN_COST_TITLE'} 		= 'Cost /transaction';
+$LANG{'TRAN_COST_TITLE_LONG'}	        = 'Cost Per Transaction';
+$LANG{'TRAN_COST_EXP'}			= 'The payment gateway provider has a charge attached to each credit card<br />transaction, this charge is separate to your banks merchant charge.  For an<br />explanation of these fee\\\'s, please contact us.';
+
+$LANG{'PRICE_EXCL_GST'}			= '* ALL PRICES EXCLUDING GST';
+
+1;

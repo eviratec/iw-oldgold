@@ -1,0 +1,27 @@
+<p>Below you will find a list of your email accounts for this website.</p>
+<table cellpadding="0" cellspacing="0" class="selection">
+  <thead>
+    <tr>
+      <th width="50">&nbsp;</th>
+      <th>Email Account</th>
+    </tr>
+  </thead>
+  <tbody>
+    [% FOREACH email IN emailList %]
+    <tr onclick="window.location = '[% webAddress %]my-account/websites/[% email.websiteID %]/emails/[% email.emailAccountID %]';">
+      <td width="50">&nbsp;</td>
+      <td>
+        <strong>[% email.username %]</strong>
+        <br /><span class="smallText">[% email.username %]@[% email.domainName %]</span>
+      </td>
+    </tr>
+    [% END %]
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2" style="vertical-align: middle;"><a href="[% webAddress %]my-account/websites/[% emailList.0.websiteID %]/emails/add">Add Email Account</a></td>
+    </tr>
+  </tfoot>
+</table>
+<p>If you have any questions please feel free to visit the customer support section.</p>
+<p><a href="[% webAddress %]my-account/websites/[% emailList.0.websiteID %]">&raquo; Return to website dashboard</a></p>

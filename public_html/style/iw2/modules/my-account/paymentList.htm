@@ -1,0 +1,39 @@
+<p>Welcome to the my payments section.  From here you can view details of previous payments made to us and make new payments.</p>
+<p>Your current account balance is <strong>$[% customerBalance %] in [% customerBalanceIn %]</strong> <span class="smallText">(at [% dateNow %])</span></p>
+<p style="text-align: right;">
+  <input type="button" class="mediumButton" name="makePayment" id="makePayment" value="Make a Payment" onclick="window.location = '[% webAddress %]my-account/payments/new';" />
+</p>
+<table cellpadding="0" cellspacing="0" class="selection">
+  <thead>
+    <tr>
+      <th>Payment ID</th>
+      <th style="text-align: center;">Method</th>
+      <th style="text-align: center;">Status</th>
+      <th style="text-align: center;">Date Paid</th>
+      <th style="text-align: right;">Amount Paid</th>
+    </tr>
+  </thead>
+  <tbody>
+    [% FOREACH payment IN paymentList %]
+    <tr>
+      <td>
+        <strong># [% payment.paymentID %]</strong>
+      </td>
+      <td style="text-align: center;">
+        [% payment.paymentMethodName %]
+      </td>
+      <td style="text-align: center;">
+        [% payment.paymentStatus %]
+      </td>
+      <td style="text-align: center;">
+        [% payment.datePaid %]
+      </td>
+      <td style="text-align: right;">
+        $[% payment.paymentAmount %]
+      </td>
+    </tr>
+    [% END %]
+  </tbody>
+</table>
+<p>If you have any questions about your payments or invoices, feel free to contact our accounts team via the customer support section.</p>
+<p><a href="[% webAddress %]my-account">&raquo; Return to account dashboard</a></p>

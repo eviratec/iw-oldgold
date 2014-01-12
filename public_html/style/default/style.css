@@ -1,0 +1,480 @@
+/*
+
+	Default Style For IntegratedWeb.com.au
+	Copyright 2010 Integrated Web Services
+
+*/
+
+/*  DEFAULT BODY STYLING
+------------------------------------------------*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #353535 url(/img/default/bg-vertical.png) repeat-y center;
+	text-align: center;
+	font-family: Arial;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+p a {
+	color: #135C95;
+	text-decoration: underline;
+}
+h1 {
+	color: #135C95;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 0 15px;
+}
+h2 {
+	color: #135C95;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 15px 0;
+	border-top: 1px solid #CCC;
+	padding-top: 10px;
+	max-width: 755px;
+}
+h1 a, h2 a {
+	color: #135C95;
+}
+form {
+	border: 0;
+	margin: 0;
+}
+#container {
+	margin: 0 auto;
+	background-color: #FFF;
+	text-align: left;
+	width: 1004px;
+	border-left: 2px solid #111;
+	border-right: 2px solid #111;
+}
+html>body #container {
+	width: 1000px;
+}
+
+/*  COLOUR ADDITIONS
+------------------------------------------------*/
+
+.green {
+	color: #008800;
+}
+.greenDiv {
+	background: #EEFFEE;
+	border: 1px solid #346634;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.greenP {
+	color: #005500;
+	margin: 0;
+	padding: 0;
+}
+.red {
+	color: #880000;
+}
+.redDiv {
+	background: #FFEEEE;
+	border: 1px solid #663434;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.redP {
+	color: #550000;
+	margin: 0;
+	padding: 0;
+}
+
+/*  HEADER & TOP MENU
+------------------------------------------------*/
+
+#topMenu {
+	background: #EEE url(/img/default/topmenu-bg.gif) repeat-x;
+	clear: both;
+	height: 25px;
+}
+#topMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+}
+#topMenu li {
+	float: left;
+	padding: 5px 15px 5px;
+}
+#topMenu .active {
+	float: left;
+	padding: 5px 15px 5px;
+	background: #EEE url(/img/default/topmenu-bg-over.gif) repeat-x;
+	color: #FFF;
+}
+#topMenu a {
+	color: #223f58;
+	text-decoration: none;
+	font-weight: bold;
+}
+#topMenu li:hover {
+	background: #EEE url(/img/default/topmenu-bg-over.gif) repeat-x;
+	color: #FFF;
+}
+#topMenu li:hover a, #topMenu .active a {
+	color: #FFF;
+}
+#topMenuRight {
+	float: right;
+	margin: 5px;
+}
+#topMenuRight img, #topMenuRight span {
+	float: left;
+}
+#topMenuRight span {
+	padding: 1px 4px;
+	margin: 0;
+	background-color: #326f9e;
+	font-size: 10px;
+	color: #FFF;
+	font-weight: bold;
+}
+#topMenuRight a {
+	color: #FFF;
+}
+#topMenuRight a:hover {
+	text-decoration: underline;
+}
+#topLogo {
+	height: 146px;
+	background: #4C8ABB url(/img/default/header.png) no-repeat;
+}
+#headContent {
+	height: 115px;
+}
+#headThread {
+	font-family: Verdana;
+	height: 31px;
+	padding: 8px 14px;
+	font-size: 11px;
+	color: #797979;
+	font-weight: normal;
+}
+html>body #headThread {
+	height: 15px;
+}
+#headThread a {
+	color: #49627F;
+}
+
+/*  TOP LOGIN BOX
+------------------------------------------------*/
+#loginBox {
+	color: #FFF;
+	width: 346px;
+	padding: 7px 10px 0px 13px;
+}
+html>body #loginBox {
+	width: 320px;
+	padding-top: 12px;
+}
+#loginBoxTitle {
+	padding: 1px;
+	border-bottom: 2px solid #FFF;
+	font-size: 14px;
+	font-weight: bold;
+}
+.loginBoxSection {
+	float: left;
+	width: 160px;
+}
+.loginFieldTitle {
+	padding: 5px 1px 4px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.loginFieldInput {
+	background: url(/img/default/input-login.png) no-repeat;
+	width: 152px;
+	height: 27px;
+}
+.loginFieldInput input {
+	width: 139px;
+	height: 23px;
+	border: none;
+	background: none;
+	margin: 3px 2px 2px 5px;
+}
+.loginSubmitSection {
+	padding-top: 0px;
+}
+html>body .loginSubmitSection {
+	padding-top: 5px;
+}
+
+/*  LEFT SIDE MENU
+------------------------------------------------*/
+
+#leftMenuCont {
+	float: left;
+	width: 183px;
+}
+#leftMenu {
+	background-color: #E8E8E8;
+	width: 183px;
+	padding-top: 7px;
+	font-size: 12px;
+}
+#leftMenu h3 {
+	color: #a5a5a5;
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0px 13px 8px;
+}
+#leftMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#leftMenu li {
+	padding: 8px 13px 8px 23px;
+}
+
+/*  BEGIN SIDE MENU INTERNET EXPLORER FIXES  */
+
+#leftMenu .noPadding { padding: 8px 0px 0px 0px; }
+html>body #leftMenu .noPadding { padding: 8px 13px 8px 23px; }
+
+#leftMenu .noPadding ul { margin-top: 8px; }
+html>body #leftMenu .noPadding ul { margin-top: 0; }
+
+#leftMenu .noPadding a { margin-left: 23px; }
+html>body #leftMenu .noPadding a { margin-left: 0; }
+
+#leftMenu .noSubPadding { margin-left: -23px; }
+html>body #leftMenu .noSubPadding { margin-left: 0; }
+
+/*  END SIDE MENU INTERNET EXPLORER FIXES  */
+
+#leftMenu li a {
+	font-weight: bold;
+	color: #223F58;
+	font-size: 13px;
+}
+#leftMenu ul ul {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 15px;
+	background-color: #CCC;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #F5F5F5;
+}
+#leftMenu ul ul li a {
+	font-weight: bold;
+	color: #454545;
+	font-size: 13px;
+}
+
+/*  MAIN BODY CONTENT
+------------------------------------------------*/
+
+#bodyContent {
+	padding: 0 25px;
+	width: 812px;
+	float: left;
+	font-size: 13px;
+	color: #333;
+}
+html>body #bodyContent {
+	width: 762px;
+}
+.disclaimer {
+	font-size: 10px;
+	font-weight: normal;
+	color: #666;
+}
+.pkgTable {
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+.pkgTable thead th {
+	background: #EEE url(/img/default/topmenu-bg.gif) repeat-x;
+	padding: 3px;
+	border-bottom: 2px solid #ACC5DA;
+	border-top: 1px solid #ACC5DA;
+	text-align: center;
+	font-size: 13px;
+	color: #000;
+}
+.pkgTable tbody th {
+	background-color: #EEE;
+	color: #000;
+	font-size: 13px;
+	text-align: left;
+	font-weight: bold;
+	padding: 5px;
+	border-top: 1px solid #CCC;
+}
+.pkgTable tbody td {
+	text-align: center;
+	font-size: 12px;
+	border-top: 1px solid #CCC;
+}
+.pkgTable tfoot td {
+	text-align: center;
+	font-size: 12px;
+	border-top: 2px solid #ACC5DA;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.pkgTable .total td, .pkgTable .total th {
+	background-color: #FFF;
+	border-top: 2px solid #ACC5DA;
+	font-weight: bold;
+}
+.pkgTable tbody a, .pkgTable tbody a:hover {
+	color: #223f58;
+	border-bottom: 1px dashed #223f58;
+	text-decoration: none;
+}
+.introText {
+	font-size: 13px;
+	color: #000;
+}
+.important {
+	font-weight: bold;
+}
+.bigLink {
+	text-decoration: none;
+	font-weight: bold;
+}
+.bigLink:hover {
+	text-decoration: underline;
+}
+.tickList li {
+	margin: -5px -5px -5px 0pt;
+	padding: 5px 5px 10px;
+	list-style-image: url(/img/default/tick-point.gif);
+}
+
+/*  HOSTING BOX
+------------------------------------------------*/
+
+.hostingBox {
+	background: url(/img/default/services/hosting-bg.png) repeat-x bottom;
+	border-style: solid;
+	border-color: #1b649d;
+	border-width: 2px 1px 1px;
+	margin: 10px 20px 10px 0px;
+	float: left;
+	width: 355px;
+}
+html>body .hostingBox {
+	width: 335px;
+}
+.hostingBox .price {
+	float: right;
+	background: url(/img/default/services/hosting-price-bg.png) repeat-x;
+	height: 42px;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 8px;
+	color: #FFF;
+}
+html>body .hostingBox .price {
+	height: 26px;
+}
+.hostingBox .priceLeft {
+	float: right;
+	background: url(/img/default/services/hosting-price-left.png) repeat-x;
+	width: 6px;
+	height: 42px;
+}
+.hostingBox h3 {
+	float: left;
+	margin: 10px 0px 0px 10px;
+	padding: 0;
+	border: 0;
+	font-size: 22px;
+	font-weight: bold;
+	color: #000;
+}
+.hostingBox .list {
+	padding: 0 10px 10px 10px;
+}
+
+/*  SERVICES SECTION
+------------------------------------------------*/
+
+.servicesNav {
+	background: url(/img/default/services/services-header.png) no-repeat;
+	width: 755px;
+	height: 55px;
+	overflow: none;
+	margin-bottom: 15px;
+}
+html>body .servicesNav {
+	height: 40px;
+}
+
+/*  FLOATING CONTACT FORM
+------------------------------------------------*/
+
+.contactDiv {
+	float: right;
+	width: 322px;
+	margin-top: 5px;
+}
+.contactDivInner {
+	background: #f1f1f1 url(/img/default/form-box-bg.gif) no-repeat bottom;
+	border-left: 2px solid #a5a5a5;
+	border-right: 2px solid #a5a5a5;
+	padding: 16px;
+}
+.contactDiv form { width: 280px; }
+.contactDivTitle {
+	border-bottom: 2px solid #135C95;
+	margin: 0 0 5px;
+}
+.contactDivTitle h2 {
+	margin: 0 0 5px;
+	padding: 0;
+	border: 0;
+}
+.contactDivSection {
+	font-size: 13px;
+	font-weight: bold;
+	color: #135C95;
+	padding: 5px 0px;
+	clear: both;
+}
+
+/*  PAGE FOOTER
+------------------------------------------------*/
+
+#topLink {
+	float: right;
+	font-size: 10px;
+	margin-right: 10px;
+	padding-top: 20px;
+}
+#topLink a {
+	color: #223F58;
+}
+#footer {
+	font-family: Verdana;
+	border-top: 1px solid #D0D0D0;
+	background-color: #E5E5E5;
+	color: #5B5B5B;
+	font-size: 10px;
+	padding: 10px 10px 10px 0;
+	clear: both;
+}
+#footer a {
+	color: #666;
+	font-weight: bold;
+}

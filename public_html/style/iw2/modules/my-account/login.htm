@@ -1,0 +1,47 @@
+<p>If you're an existing customer of Integrated Web Services, please enter your username and password and click login to access the my account area.</p>
+<p>Having trouble?  If you've lost your password, <a href="[% webAddress %]my-account/lost-password">click here</a> to generate a new one.</p>
+<div class="contactDivMini">
+  
+  <form action="[% webAddress %]my-account/login" method="post" id="loginForm">
+    
+    <div class="contactDivInner">
+      
+      <div class="contactDivTitle"><h2>Customer Login</h2></div>
+      <div class="contactDivContents">
+        
+        <div style="display: [% errorDivDisplay %]; font-weight: bold; color: #FFF; background-color: #900; margin: 0 10px 10px; padding: 5px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;">Invalid username/password combination</div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Username</div>
+          <div style=""><input class="mediumInput" type="text" id="username" name="username" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Password</div>
+          <div style=""><input class="mediumInput" type="password" id="password" name="password" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        
+      </div>
+      
+    </div>
+    
+    <div style="text-align: center;">
+      
+      <div style="color: #333; font-weight: normal; text-align: center; margin-top: 10px;">
+        <input type="hidden" id="req" name="req" value="my-account/login" />
+        <input type="hidden" id="requiredFields" name="requiredFields" value="username::Username,password::Password" />
+        <input type="submit" id="submit" name="submit" class="mediumButton" value="Login" onclick="javascript:validateForm('loginForm'); return false;" />
+        <br /><a href="[% webAddress %]my-account/lost-password" class="buttonLink">Forgot Password</a>
+      </div>
+      
+      <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+      
+    </div>
+    
+  </form>
+  
+</div>

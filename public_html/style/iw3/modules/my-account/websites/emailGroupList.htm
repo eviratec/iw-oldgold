@@ -1,0 +1,30 @@
+<p>Email groups are single email addresses that send to multiple email accounts, this might be good for department emails such as sales@yourdomain.com.</p>
+<table cellpadding="0" cellspacing="0" class="selection">
+  <thead>
+    <tr>
+      <th width="20" style="text-align: right; vertical-align: center;"><input type="checkbox" name="selectAll" id="selectAll" /></th>
+      <th>Email Group</th>
+      <th style="text-align: right;">Linked to</th>
+    </tr>
+  </thead>
+  <tbody>
+    [% FOREACH alias IN emailAliasList %]
+    <tr>
+      <td width="20" style="text-align: right; vertical-align: center;"><input type="checkbox" name="check_[% alias.emailAliasID %]" id="check_[% alias.emailAliasID %]" value="[% alias.emailAliasID %]" /></td>
+      <td>
+        <a href="[% webAddress %]my-account/websites/[% alias.websiteID %]/email-groups/[% alias.emailAliasID %]">[% alias.emailAlias %]@[% alias.domainName %]</a>
+      </td>
+      <td style="text-align: right;">
+        [% alias.emailAliasAccounts %] account[% IF alias.emailAliasAccounts != 1 %]s[% END %]
+      </td>
+    </tr>
+    [% END %]
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3"><a href="[% webAddress %]my-account/websites/[% emailAliasList.0.websiteID %]/email-groups/add">Add Email Group</a></td>
+    </tr>
+  </tfoot>
+</table>
+<p>If you have any questions please feel free to visit the customer support section.</p>
+<p><a href="[% webAddress %]my-account/websites/[% emailAliasList.0.websiteID %]">&raquo; Return to website dashboard</a></p>

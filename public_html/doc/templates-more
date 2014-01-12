@@ -1,0 +1,22 @@
+$tplData = [
+
+  "PAGE_TITLE" => 'Page Title',
+
+  "LEFTMENU" => [
+
+    "SWITCH" => "SERVICES_MENU",
+
+    "SERVICES_MENU" => [
+
+      "TITLE" => "Services Menu",
+      "ITEMS" => (["LINK_TITLE" => 'Overview', "LINK_URL" => '/services.html'],
+        ["LINK_TITLE" => 'Ecommerce', "LINK_URL" => '/services.html'],
+        ["LINK_TITLE" => 'Website Design', "LINK_URL" => '/services.html'],
+        ["LINK_TITLE" => 'Application Development', "LINK_URL" => '/services.html'],
+        ["LINK_TITLE" => 'Search Optimisation & Marketing', "LINK_URL" => '/services.html'])
+
+      ]
+
+    ]
+
+  ]

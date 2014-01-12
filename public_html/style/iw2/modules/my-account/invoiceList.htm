@@ -1,0 +1,36 @@
+<p>Welcome to the my invoices section.  From here you can print, download or view a summary of your recent invoices.</p>
+<p>Your current account balance is <strong>$[% customerBalance %] in [% customerBalanceIn %]</strong> <span class="smallText">(at [% dateNow %])</span></p>
+<p style="text-align: right;">
+  &nbsp;<input type="button" class="mediumButton" name="paymentHistory" id="paymentHistory" value="Payment History" onclick="window.location = '[% webAddress %]my-account/payments';" />
+  &nbsp;<input type="button" class="mediumButton" name="makePayment" id="makePayment" value="Make a Payment" onclick="window.location = '[% webAddress %]my-account/payments/new';" />&nbsp;
+</p>
+<table cellpadding="0" cellspacing="0" class="selection">
+  <thead>
+    <tr>
+      <th>Invoice ID</th>
+      <th style="text-align: center;">Date Invoiced</th>
+      <th style="text-align: center;">Due Date</th>
+      <th style="text-align: right;">Total Due</th>
+    </tr>
+  </thead>
+  <tbody>
+    [% FOREACH invoice IN invoiceList %]
+    <tr>
+      <td>
+        <strong><a href="[% webAddress %]my-account/invoices/[% invoice.invoiceID %]"># [% invoice.invoiceID %]</a></strong>
+      </td>
+      <td style="text-align: center;">
+        [% invoice.dateInvoiceCreated %]
+      </td>
+      <td style="text-align: center;">
+        [% invoice.dateInvoiceDue %]
+      </td>
+      <td style="text-align: right;">
+        $[% invoice.invTotal %]
+      </td>
+    </tr>
+    [% END %]
+  </tbody>
+</table>
+<p>If you have any questions about your invoices or account balance, feel free to contact our accounts team via the customer support section.</p>
+<p><a href="[% webAddress %]my-account">&raquo; Return to account dashboard</a></p>

@@ -1,0 +1,62 @@
+<div class="invoiceBlock">
+  Invoice #
+  <div>[% invoiceItemList.0.invoiceID %]</div>
+</div>
+<div class="invoiceBlock">
+  Due Date
+  <div>[% invoiceItemList.0.dateInvoiceDue %]</div>
+</div>
+<div class="invoiceBlock">
+  Total Due
+  <div>$[% invoiceItemList.0.invoiceTotal %]</div>
+</div>
+<p style="margin-left: 5px;">
+  <strong>Invoice To</strong>
+  <br /><br /><strong>[% addressInfo.0.name %]</strong>
+  <br />ATTN: [% addressInfo.0.firstName %] [% addressInfo.0.lastName %]
+  <br />[% addressInfo.0.firstLine %] [% IF addressInfo.0.secondLine %]
+  <br />[% addressInfo.0.secondLine %] [% END %]
+  <br />[% addressInfo.0.city %] [% addressInfo.0.stateName %] [% addressInfo.0.postcode %]
+  <br /><br /><strong>Customer # [% addressInfo.0.customerID %]</strong>
+</p>
+<table cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th style="text-align: center;">Qty</th>
+      <th style="text-align: left;">Item Description</th>
+      <th style="text-align: right;">Price</th>
+      <th style="text-align: right;">Line Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    [% FOREACH item IN invoiceItemList %]
+    <tr height="50">
+      <td style="text-align: center;"><strong>[% item.itemQuantity %]</strong></td>
+      <td style="text-align: left;">[% item.itemDescription %] [% IF item.dispDetails %]<br /><span class="smallText">[% item.itemDetails %]</span>[% END %]</td>
+      <td style="text-align: right;">$[% item.itemPrice %]</td>
+      <td style="text-align: right;">$[% item.lineTotal %]</td>
+    </tr>
+    [% END %]
+  </tbody>
+  <tfoot class="invoices">
+    <tr height="30">
+      <td colspan="2" rowspan="3" style="border-right: 1px solid #666; background: #FFF;"></td>
+      <td>Sub-Total</td>
+      <td>$[% invoiceItemList.0.invoiceSubTotal %]</td>
+    </tr>
+    <tr height="30">
+      <td>GST (10%)</td>
+      <td>$[% invoiceItemList.0.invoiceTax %]</td>
+    </tr>
+    <tr height="30">
+      <td>Total Due</td>
+      <td>$[% invoiceItemList.0.invoiceTotal %]</td>
+    </tr>
+  </tfoot>
+</table>
+<p style="text-align: right;">
+  &nbsp;<input type="button" class="mediumButton" name="makePayment" id="makePayment" value="Make a Payment" onclick="window.location = '[% webAddress %]my-account/payments/new';" />
+  &nbsp;<input type="button" class="mediumButton" name="printInvoice" id="printInvoice" value="Print Invoice" onclick="javascript: printPage(document.location.href);" />&nbsp;
+</p>
+<p>If you have any questions about your invoices or account balance, feel free to contact our accounts team via the customer support section.</p>
+<p><a href="[% webAddress %]my-account/invoices">&raquo; Return to invoices list</a></p>

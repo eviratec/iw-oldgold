@@ -1,0 +1,150 @@
+<p class="big">Please provide us with a few details to get a <span>FREE</span> customised quote sent <span>DIRECT</span> to your email.</p>
+
+<p class="big">Your customised quote will include</p>
+
+<ul class="tickListBig">
+  <li>Cost choices</li>
+  <li>Several examples</li>
+  <li>Our contact information</li>
+  <li>An expected time frame</li>
+</ul>
+
+<h2>Quote Form</h2>
+
+<p><strong>* Denotes required field</strong></p>
+
+<div class="contactDiv">
+  
+  <form action="[% webAddress %]contact-us/thankyou" method="POST" name="quoteForm" id="quoteForm">
+    
+    <div class="contactDivInner">
+      
+      <div class="contactDivTitle"><h2>Contact Details</h2></div>
+      <div class="contactDivContents">
+      
+        <div class="contactDivSection">
+          <div class="sectionTitle">Your Name *</div>
+          <div style=""><input class="largeInput" type="text" id="name" name="name" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Business/Company Name</div>
+          <div style=""><input class="largeInput" type="text" id="companyName" name="companyName" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Email Address *</div>
+          <div style=""><input class="largeInput" type="text" id="email" name="email" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Daytime Phone Number</div>
+          <div style=""><input class="largeInput" type="text" id="dayPhone" name="dayPhone" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Contact Preference *</div>
+          <div style="color: #333;"><input type="radio" id="contactPref" name="contactPref" value="phone" checked /> Phone <input type="radio" id="contactPref" name="contactPref" value="email" /> Email</div>
+        </div>
+        
+        <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif" style="height: 1px;" /></div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="contactDivInner">
+      
+      <div class="contactDivTitle"><h2>Quote Information</h2></div>
+      <div class="contactDivContents">
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">What type of quote would you like? *</div>
+          <div style="">
+            <select id="quoteType" name="quoteType" style="width: 285px;" size="7">
+            <option value="Custom Quote" selected>Not sure / special request</option>
+            <option value="Services">Services</option>
+            <option value="Services -> Application Development"> -> Application Development</option>
+            <option value="Services -> Ecommerce"> -> Ecommerce</option>
+            <option value="Services -> Web &amp; UI Design"> -> Web &amp; UI Design</option>
+            <option value="Services -> Social Media"> -> Social Media</option>
+            <option value="Services -> Online Marketing"> -> Online Marketing</option>
+            <option value="Hosting &amp; Domains">Hosting &amp; Domains</option>
+            <option value="Hosting &amp; Domains -> Standard"> -> Standard Hosting</option>
+            <option value="Hosting &amp; Domains -> Reseller"> -> Reseller Hosting</option>
+            <option value="Hosting &amp; Domains -> VPS"> -> Virtual Private Servers</option>
+            <option value="Hosting &amp; Domains -> Domains"> -> Domains</option>
+            </select>
+          </div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Additional Details</div>
+          <div style=""><textarea id="details" name="details" style="width: 285px; height: 120px;"></textarea></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Do you have a budget?</div>
+          <div style="color: #333;"><input type="radio" id="budget" name="budget" value="no" onclick="hideDiv('budgetDiv');" checked /> No <input type="radio" id="budget" name="budget" value="yes" onclick="showDiv('budgetDiv');" /> Yes</div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection" id="budgetDiv" name="budgetDiv" style="display: none;">
+          <div class="sectionTitle">What is your budget?</div>
+          <div style="color: #333;">$ <input class="smallInput" type="text" id="budgetAmount" name="budgetAmount" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Do you already have a website?</div>
+          <div style="color: #333;"><input type="radio" id="website" name="website" value="no" onclick="hideDiv('curWebAddr');" checked /> No <input type="radio" id="website" name="website" value="yes" onclick="showDiv('curWebAddr');" /> Yes</div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection" id="curWebAddr" name="curWebAddr" style="display: none;">
+          <div class="sectionTitle">What is your current website address?</div>
+          <div style=""><input class="largeInput" type="text" id="websiteAddress" name="websiteAddress" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Do you have a deadline?</div>
+          <div style="color: #333;"><input type="radio" id="deadline" name="deadline" value="no" onclick="hideDiv('deadlineDate');" checked /> No <input type="radio" id="deadline" name="deadline" value="yes" onclick="showDiv('deadlineDate');" /> Yes</div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection" id="deadlineDate" name="deadlineDate" style="display: none;">
+          <div class="sectionTitle">What is your deadline?</div>
+          <div style="color: #333;"><input class="mediumInput" type="text" id="deadlineDate" name="deadlineDate" /> DD/MM/YY</div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        
+      </div>
+      
+      <div style="text-align: center;">
+        <div style="color: #333; font-weight: normal; text-align: center;"><input type="hidden" id="subForm" name="subForm" value="true" />
+          <input type="hidden" id="req" name="req" value="contact-us/thankyou" />
+          <input type="hidden" id="requiredFields" name="requiredFields" value="name::Name,email::Email Address,contactPref::Contact Preference" />
+          <input type="hidden" id="validateEmail" name="validateEmail" value="email::Email Address" />
+          <input type="hidden" id="contactType" name="contactType" value="quote" />
+          <input type="submit" id="submit" name="submit" class="mediumButton" value="Request Quote" onclick="javascript:validateForm('quoteForm'); return false;" /></div>
+        <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+      </div>
+      
+    </div>
+    
+  </form>
+  
+</div>

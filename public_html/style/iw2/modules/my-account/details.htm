@@ -1,0 +1,45 @@
+<br />
+<div class="formList">
+    <strong>Full Name:</strong><br />
+    [% fullName %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>Primary Email:</strong><br />
+    [% info.emailPrimary %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>Secondary Email:</strong><br />
+    [% IF !info.emailSecondary %]None / Not Provided[% END %]
+    [% info.emailSecondary %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>Office Phone Number:</strong><br />
+    [% IF !info.phoneOffice %]None / Not Provided[% END %]
+    [% info.phoneOffice %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>Mobile Phone Number:</strong><br />
+    [% IF !info.phoneMobile %]None / Not Provided[% END %]
+    [% info.phoneMobile %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>Other Phone Number:</strong><br />
+    [% IF !info.phoneOther %]None / Not Provided[% END %]
+    [% info.phoneOther %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>Address:</strong><br />
+    [% info.firstLine %]<br />
+    [% IF info.secondLine %] [% info.secondLine %]<br /> [% END %]
+    [% info.city %], [% info.stateName %]<br />
+    [% info.countryName %] [% info.postcode %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br />
+</div>
+<h2>Company Details</h2>
+<div class="formList">
+    <strong>Company Name:</strong><br />
+    [% IF !company.name %]None / Not Provided[% END %]
+    [% company.name %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>ABN/ARBN:</strong><br />
+    [% IF !company.abn %]None / Not Provided[% END %]
+    [% company.abn %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>ACN:</strong><br />
+    [% IF !company.acn %]None / Not Provided[% END %]
+    [% company.acn %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>Office Phone:</strong><br />
+    [% IF !company.phoneOffice %]None / Not Provided[% END %]
+    [% company.phoneOffice %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br /><br />
+    <strong>Company Address:</strong><br />
+    [% company.firstLine %]<br />
+    [% IF company.secondLine %] [% company.secondLine %]<br /> [% END %]
+    [% company.city %], [% company.stateName %]<br />
+    [% company.country %] [% company.postcode %] <!--<a href="[% webAddress %]my-account/details/edit">Edit</a>--><br />
+</div>
+<br />

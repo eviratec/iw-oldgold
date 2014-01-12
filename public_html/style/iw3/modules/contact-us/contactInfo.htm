@@ -1,0 +1,101 @@
+<p class="introText">You can contact us directly using the details provided, or you can use the enquiry form below and we will contact you as soon as we can!</p>
+
+<p>If you're after more information about our products and services,
+<br /><a href="[% webAddress %]contact-us/get-a-quote.html">click here to use our quote form to receive a FREE quote.</a></p>
+
+<h2>Contact Details</h2>
+
+<p><strong>Phone</strong><br />1800 823 365
+<br /><br /><strong>Address</strong><br />9 Willow Avenue
+<br />Mitcham, Victoria 3132
+<br /><br /><strong>Email</strong><br />enquiries@integratedweb.com.au</p>
+
+<h2>Contact Form</h2>
+
+<p><strong>* Denotes required field</strong></p>
+
+<div class="contactDiv">
+  
+  <form action="[% webAddress %]contact-us/thankyou" method="POST" name="quoteForm" id="quoteForm">
+    
+    <div class="contactDivInner">
+      
+      <div class="contactDivTitle"><h2>Contact Details</h2></div>
+      <div class="contactDivContents">
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Your Name *</div>
+          <div style=""><input class="largeInput" type="text" id="name" name="name" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Business/Company Name</div>
+          <div style=""><input class="largeInput" type="text" id="companyName" name="companyName" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Email Address *</div>
+          <div style=""><input class="largeInput" type="text" id="email" name="email" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Daytime Phone Number</div>
+          <div style=""><input class="largeInput" type="text" id="dayPhone" name="dayPhone" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Contact Preference *</div>
+          <div style="color: #333;"><input type="radio" id="contactPref" name="contactPref" value="phone" checked /> Phone <input type="radio" id="contactPref" name="contactPref" value="email" /> Email</div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="contactDivInner">
+      
+      <div class="contactDivTitle"><h2>Enquiry Details</h2></div>
+      <div class="contactDivContents">
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Subject</div>
+          <div style=""><input class="largeInput" type="text" id="subject" name="subject" /></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div class="contactDivSection">
+          <div class="sectionTitle">Message*</div>
+          <div style=""><textarea id="message" name="message" style="width: 285px; height: 120px;"></textarea></div>
+          <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        </div>
+        
+        <div style="clear: both; height: 1px;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+        
+      </div>
+      
+    </div>
+    
+    <div style="text-align: center;">
+      
+      <div style="color: #333; font-weight: normal; text-align: center; margin-top: 10px;"><input type="hidden" id="subForm" name="subForm" value="true" />
+        <input type="hidden" id="req" name="req" value="contact-us/thankyou" />
+        <input type="hidden" id="requiredFields" name="requiredFields" value="name::Name,email::Email Address,contactPref::Contact Preference,message::Message" />
+        <input type="hidden" id="validateEmail" name="validateEmail" value="email::Email Address" />
+        <input type="hidden" id="contactType" name="contactType" value="enquiry" />
+        <input type="submit" id="submit" name="submit" class="mediumButton" value="Send Enquiry" onclick="javascript:validateForm('quoteForm'); return false;" />
+      </div>
+      
+      <div style="clear: both;"><img src="[% webAddress %]img/shared/spacer.gif"></div>
+      
+    </div>
+    
+  </form>
+  
+</div>
